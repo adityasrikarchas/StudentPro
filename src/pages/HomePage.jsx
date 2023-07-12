@@ -1,11 +1,11 @@
 const Home = () => {
   return (
-    <div className="home-container center">
+    <div id="home-container" className="center">
       <h1>
         <i
           className="fa-solid fa-bolt"
           style={{
-            marginRight: "15px",
+            marginRight: '15px',
           }}
         />
         Hi, welcome to avinash templates/react
