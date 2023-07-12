@@ -1,7 +1,16 @@
-const Icon = ({ icon, alt = 'icon-alt' }) => {
+const Icon = ({ icon, alt = 'icon-alt', style }) => {
   return (
-    <div>
-      <img src={icon} alt={alt} />
+    <div className="center fit-content">
+      <img
+        src={icon}
+        alt={alt}
+        style={{
+          width: '25px',
+          height: '25px',
+          cursor: 'pointer',
+          ...style,
+        }}
+      />
     </div>
   );
 };

@@ -6,6 +6,8 @@ Students Pro is a web application built with React that helps students improve t
 
 - Figma : https://www.figma.com/file/8tUj1p3HbidyNfJmGeH2aw/Vils-Student-Pro?type=design&node-id=0%3A1&mode=design&t=h0xWfZXeKzXzUR9k-1
 
+- Older Designs : https://www.figma.com/file/NvKLFEK3TjsJV0Tr9yIOKZ/Vils-student-user-flow?node-id=0%3A1&mode=dev
+
 ## Features
 
 - User authentication: Users can create an account and log in to access the application.

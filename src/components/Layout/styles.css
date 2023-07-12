@@ -7,39 +7,84 @@
   display: flex;
   justify-content: space-between;
   align-items: start;
-  z-index: 100;
 }
 
 #layout-wrapper > #layout-wrapper-sidebar-container {
   width: 20%;
   height: 100vh;
-  overflow-y: scroll;
+  overflow-y: hidden;
   border-radius: 0px 15px 15px 0px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
   background: var(--color-white);
   position: relative;
-  z-index: 10;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#layout-wrapper > #layout-wrapper-sidebar-container > #sidebar-content-routes {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
 }
 
 #layout-wrapper
   > #layout-wrapper-sidebar-container
-  > #layout-wrapper-sidebar-toggle-button {
-  position: absolute;
-  top: 20px;
-  left: 100%;
-  transform: translateX(-50%);
-  width: fit-content;
-  height: fit-content;
-  z-index: 20;
+  #layout-wrapper-sidebar-routes-container {
+  overflow-y: scroll;
+  margin-top: 10px;
 }
 
-#layout-wrapper-sidebar-container::-webkit-scrollbar {
+#layout-wrapper-sidebar-routes-container::-webkit-scrollbar {
   width: 0px;
+}
+
+#layout-wrapper
+  > #layout-wrapper-sidebar-container
+  #sidebar-content-logout-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+#sidebar-content-logout-button p {
+  font-size: 1em;
+  margin-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+  overflow-wrap: break-word;
+  flex-grow: 1;
+}
+
+#sidebar-content-logout-button div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#layout-wrapper-sidebar-routes-container #routes-tab {
+  padding: 10px 15px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+#layout-wrapper
+  > #layout-wrapper-sidebar-container
+  #layout-wrapper-sidebar-routes-container {
+  flex-grow: 1;
 }
 
 #layout-wrapper > #layout-wrapper-page-container {
   flex-grow: 1;
   height: 100vh;
   overflow-y: scroll;
-  z-index: 10;
 }

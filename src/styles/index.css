@@ -41,3 +41,8 @@ li {
 .debug {
   border: 2px solid red;
 }
+
+.fit-content {
+  width: fit-content;
+  height: fit-content;
+}
