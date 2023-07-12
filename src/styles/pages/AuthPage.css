@@ -1,0 +1,46 @@
+#auth-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--color-dark);
+  z-index: -2;
+}
+
+#auth-page > .auth-page-bg-image {
+  position: absolute;
+  z-index: -1;
+}
+
+#auth-page > #image-14 {
+  top: 0;
+  left: 0;
+  width: 50vw;
+}
+
+#auth-page > #image-15 {
+  bottom: -100vh;
+  left: 10vw;
+  width: 50vw;
+}
+
+#auth-page > #image-16 {
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+}
+
+#auth-page-login-signup-form-container {
+  background: var(--color-white);
+  min-width: 50%;
+  min-height: 60%;
+  border-radius: 25px;
+  padding: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  #auth-page-login-signup-form-container {
+    width: 95%;
+    min-height: 60%;
+  }
+}
