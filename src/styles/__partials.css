@@ -2,15 +2,39 @@
 /*
     Change the imports according to your needs.
 */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Poppins:ital@0;1&family=Roboto:ital@0;1&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Poppins:ital@0;1&family=Roboto:ital@0;1&display=swap');
 
 :root {
   /* Colors Schemes */
+  /* Black & White  */
+  --color-black: rgba(0, 0, 0, 1);
+  --color-white: rgba(255, 255, 255, 1);
+  /* Green  */
+  --color-green: rgba(62, 185, 111, 1);
+  /* Blue  */
+  --color-dark: rgba(17, 44, 65, 1);
+  --color-blueDark: rgba(7, 81, 133, 1);
+  --color-primaryBlue: rgba(2, 128, 212, 1);
+  /* Red  */
+  --color-warningRed: rgba(218, 56, 50, 1);
+  --color-orange: rgba(255, 144, 64, 1);
+  /* Green  */
+  --color-successGreen: rgba(62, 185, 111, 1);
+  /* Background  */
+  --color-Background: linear-gradient(
+    136deg,
+    #f5f7fb 0%,
+    rgba(246, 246, 246, 0.79) 21.35%,
+    rgba(219, 219, 219, 0.51) 48.96%,
+    rgba(236, 242, 255, 0.25) 82.29%,
+    rgba(116, 161, 186, 0.29) 100%
+  );
+
   /* Font Schemes */
   /*
         Change the variable names according to your needs.
     */
-  --font-poppins: "Poppins";
-  --font-roboto: "Roboto";
-  --font-montserrat: "Montserrat";
+  --font-poppins: 'Poppins';
+  --font-roboto: 'Roboto';
+  --font-montserrat: 'Montserrat';
 }
