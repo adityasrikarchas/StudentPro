@@ -1,7 +1,7 @@
 const Error = () => {
   return (
     <div id="error-container" className="center">
-      <h1>Hi, welcome to avinash templates / react</h1>
+      <h1>Page Under Construction</h1>
     </div>
   );
 };

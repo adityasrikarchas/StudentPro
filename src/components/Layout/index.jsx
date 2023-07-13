@@ -1,5 +1,8 @@
 // External Imports
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+
+// Internal Imports
+import { useState, useEffect } from 'react';
 
 // Importing Styles
 import './styles.css';
@@ -29,6 +32,7 @@ const RoutesTab = ({
   route = '/',
   active = false,
   disable,
+  full,
 }) => {
   return (
     <Link to={route} style={{ textDecoration: 'none' }}>
@@ -36,6 +40,8 @@ const RoutesTab = ({
         id="routes-tab"
         style={{
           background: active ? 'var(--color-primary-blue)' : 'transparent',
+          justifyContent: !full ? 'center' : 'start',
+          paddingLeft: !full ? '20px' : '15px',
         }}
       >
         {icon && (
@@ -47,29 +53,133 @@ const RoutesTab = ({
             }}
           />
         )}
-        <p
-          style={{
-            color: disable
-              ? 'var(--color-gray)'
-              : active
-              ? 'var(--color-white)'
-              : 'var(--color-black)',
-          }}
-        >
-          {label}
-        </p>
+        {full && (
+          <p
+            style={{
+              color: disable
+                ? 'var(--color-gray)'
+                : active
+                ? 'var(--color-white)'
+                : 'var(--color-black)',
+            }}
+          >
+            {label}
+          </p>
+        )}
       </div>
     </Link>
   );
 };
 
 const Layout = ({ children }) => {
-  // const toggleSidebar = () => {};
+  const location = useLocation();
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [currentRoute, setCurrentRoute] = useState('/');
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  const navigations = {
+    active: [
+      {
+        key: 'dashboard',
+        label: 'Dashboard',
+        icon: Dashboard,
+        routes: '/',
+      },
+      {
+        key: 'mentorship',
+        label: '1 on 1 mentor',
+        icon: Mentoring,
+        routes: '/mentorship',
+      },
+      {
+        key: 'mock-interviews',
+        label: 'Mock Interviews',
+        icon: Bot,
+        routes: '/mock-interviews',
+      },
+      {
+        key: 'practice-test',
+        label: 'Practice Test',
+        icon: Speech,
+        routes: '/practice-test',
+      },
+      {
+        key: 'communication',
+        label: 'Communication',
+        icon: Book,
+        routes: '/communication',
+      },
+      {
+        key: 'reports',
+        label: 'Reports',
+        icon: Report,
+        routes: '/reports',
+      },
+      {
+        key: 'settings',
+        label: 'Settings',
+        icon: Settings,
+        routes: '/settings',
+      },
+      {
+        key: 'premium-memborship',
+        label: 'Premium',
+        icon: Crown,
+        routes: '/premium-memborship',
+      },
+    ],
+    disabled: [
+      {
+        key: 'build-resume',
+        label: 'Resume',
+        icon: Resume,
+        routes: '/build-resume',
+        disabled: true,
+      },
+      {
+        key: 'courses',
+        label: 'Course',
+        icon: Course,
+        routes: '/courses',
+        disabled: true,
+      },
+    ],
+  };
+
+  useEffect(() => {
+    setCurrentRoute(location.pathname);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    console.log(currentRoute);
+  }, [currentRoute]);
 
   return (
     <div id="layout-wrapper">
+      {/* Toggle Button */}
+      <RoundedIconButton
+        className="layout-wrapper-toggle-button"
+        action={toggleSidebar}
+        style={{
+          left: isSidebarOpen ? '20%' : '8%',
+        }}
+      >
+        <i
+          className="fa-sharp fa-solid fa-bars"
+          style={{ color: 'var(--color-white)' }}
+        ></i>
+      </RoundedIconButton>
+
       {/* Sidebar */}
-      <div id="layout-wrapper-sidebar-container">
+      <div
+        id="layout-wrapper-sidebar-container"
+        style={{
+          width: isSidebarOpen ? '20%' : '8%',
+        }}
+      >
         {/* Sidebar Content */}
         <div id="sidebar-content-routes">
           {/* Header */}
@@ -85,14 +195,17 @@ const Layout = ({ children }) => {
 
           {/* Routes */}
           <div id="layout-wrapper-sidebar-routes-container">
-            <RoutesTab icon={Dashboard} label={'Dashboard'} />
-            <RoutesTab icon={Mentoring} label={'1 on 1 mentor'} />
-            <RoutesTab icon={Bot} label={'Mock Interviews'} />
-            <RoutesTab icon={Speech} label={'Practice Test'} />
-            <RoutesTab icon={Book} label={'Communication'} active={true} />
-            <RoutesTab icon={Report} label={'Reports'} />
-            <RoutesTab icon={Settings} label={'Settings'} />
-            <RoutesTab icon={Crown} label={'Premium'} />
+            {navigations.active.map((navigation) => (
+              <RoutesTab
+                icon={navigation.icon}
+                label={navigation.label}
+                key={navigation.key}
+                disable={navigation.disabled ? true : false}
+                full={isSidebarOpen}
+                route={navigation.routes}
+                active={currentRoute === navigation.routes}
+              />
+            ))}
             <div
               style={{
                 height: '2px',
@@ -100,17 +213,33 @@ const Layout = ({ children }) => {
                 background: 'var(--color-gray)',
               }}
             />
-            <RoutesTab icon={Resume} label={'Resume'} disable={true} />
-            <RoutesTab icon={Course} label={'Course'} disable={true} />
+            {navigations.disabled.map((navigation) => (
+              <RoutesTab
+                icon={navigation.icon}
+                label={navigation.label}
+                key={navigation.key}
+                disable={navigation.disabled ? true : false}
+                full={isSidebarOpen}
+                route={navigation.routes}
+                active={currentRoute === navigation.routes}
+              />
+            ))}
           </div>
         </div>
 
         {/* Logout Button */}
-        <div id="sidebar-content-logout-button">
-          <div>
-            <RoundedIconButton icon={User} />
-            <p>Avinash Gupta</p>
-          </div>
+        <div
+          id="sidebar-content-logout-button"
+          style={{
+            paddingLeft: !isSidebarOpen ? '25px' : '10px',
+          }}
+        >
+          {isSidebarOpen && (
+            <div>
+              <RoundedIconButton icon={User} />
+              <p>Avinash Gupta</p>
+            </div>
+          )}
           <Icon icon={Logout} />
         </div>
       </div>

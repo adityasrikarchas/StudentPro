@@ -1,7 +1,13 @@
 // Components
 import Icon from '../Icon';
 
-const RoundedIconButton = ({ icon, children, action = () => {}, style }) => {
+const RoundedIconButton = ({
+  icon,
+  children,
+  action = () => {},
+  style,
+  className,
+}) => {
   return (
     <div
       onClick={action}
@@ -16,6 +22,7 @@ const RoundedIconButton = ({ icon, children, action = () => {}, style }) => {
         cursor: 'pointer',
         ...style,
       }}
+      className={className}
     >
       {icon && <Icon icon={icon} />}
       {!icon && children}

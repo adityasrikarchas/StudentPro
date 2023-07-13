@@ -3,7 +3,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 // Internal Imports
-import { lazy, useEffect } from 'react';
+import { lazy, useEffect, Suspense } from 'react';
 import Routings from './routes';
 
 // Components
@@ -27,11 +27,13 @@ const App = () => {
 
   return (
     <Layout>
-      <Routes>
-        {Routings.map((route, index) => (
-          <Route {...route} key={index} />
-        ))}
-      </Routes>
+      <Suspense>
+        <Routes>
+          {Routings.map((route, index) => (
+            <Route {...route} key={index} />
+          ))}
+        </Routes>
+      </Suspense>
     </Layout>
   );
 };
