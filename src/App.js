@@ -3,12 +3,11 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 // Internal Imports
-<<<<<<< HEAD
-import { useEffect } from 'react';
-=======
-import { lazy, useEffect, Suspense } from 'react';
->>>>>>> sidebar
+import { useEffect, Suspense } from 'react';
 import Routings from './routes';
+
+// Components
+import Layout from './components/Layout';
 
 const App = () => {
   const navigate = useNavigate();
@@ -27,13 +26,6 @@ const App = () => {
   );
 
   return (
-<<<<<<< HEAD
-    <Routes>
-      {Routings.map((route, index) => (
-        <Route {...route} key={index} />
-      ))}
-    </Routes>
-=======
     <Layout>
       <Suspense>
         <Routes>
@@ -43,7 +35,6 @@ const App = () => {
         </Routes>
       </Suspense>
     </Layout>
->>>>>>> sidebar
   );
 };
 
