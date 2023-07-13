@@ -37,3 +37,15 @@ li {
   align-items: center;
   justify-content: center;
 }
+<<<<<<< HEAD
+=======
+
+.debug {
+  border: 2px solid red;
+}
+
+.fit-content {
+  width: fit-content;
+  height: fit-content;
+}
+>>>>>>> sidebar

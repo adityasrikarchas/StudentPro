@@ -6,6 +6,7 @@
   /* Black & White  */
   --color-black: rgba(0, 0, 0, 1);
   --color-white: rgba(255, 255, 255, 1);
+  --color-gray: rgba(168, 168, 168, 1);
   /* Green  */
   --color-green: rgba(62, 185, 111, 1);
   /* Blue  */
@@ -26,6 +27,7 @@
     rgba(236, 242, 255, 0.25) 82.29%,
     rgba(116, 161, 186, 0.29) 100%
   );
+  --gradient-text: linear-gradient(90deg, #0280d4 0%, #0adab0 113.36%);
 
   /* Font Schemes */
   --font-poppins: 'Poppins';
