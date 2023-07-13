@@ -3,11 +3,11 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 // Internal Imports
-import { useEffect, Suspense } from 'react';
+import { lazy, useEffect, Suspense } from 'react';
 import Routings from './routes';
 
 // Components
-import Layout from './components/Layout';
+const Layout = lazy(() => import('./components/Layout'));
 
 const App = () => {
   const navigate = useNavigate();
