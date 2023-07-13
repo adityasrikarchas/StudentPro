@@ -3,7 +3,6 @@
 
 :root {
   /* Colors Schemes */
-
   /* Black & White  */
   --color-black: rgba(0, 0, 0, 1);
   --color-white: rgba(255, 255, 255, 1);
@@ -11,16 +10,15 @@
   --color-green: rgba(62, 185, 111, 1);
   /* Blue  */
   --color-dark: rgba(17, 44, 65, 1);
-  --color-blue-dark: rgba(7, 81, 133, 1);
-  --color-primary-blue: rgba(2, 128, 212, 1);
+  --color-blueDark: rgba(7, 81, 133, 1);
+  --color-primaryBlue: rgba(2, 128, 212, 1);
   /* Red  */
-  --color-warning-red: rgba(218, 56, 50, 1);
+  --color-warningRed: rgba(218, 56, 50, 1);
   --color-orange: rgba(255, 144, 64, 1);
   /* Green  */
-  --color-success-green: rgba(62, 185, 111, 1);
-
-  /* Gradients  */
-  --gradient-background: linear-gradient(
+  --color-successGreen: rgba(62, 185, 111, 1);
+  /* Background  */
+  --color-Background: linear-gradient(
     136deg,
     #f5f7fb 0%,
     rgba(246, 246, 246, 0.79) 21.35%,

@@ -3,11 +3,8 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 // Internal Imports
-import { lazy, useEffect } from 'react';
+import { useEffect } from 'react';
 import Routings from './routes';
-
-// Components
-const Layout = lazy(() => import('./components/Layout'));
 
 const App = () => {
   const navigate = useNavigate();
@@ -26,13 +23,11 @@ const App = () => {
   );
 
   return (
-    <Layout>
-      <Routes>
-        {Routings.map((route, index) => (
-          <Route {...route} key={index} />
-        ))}
-      </Routes>
-    </Layout>
+    <Routes>
+      {Routings.map((route, index) => (
+        <Route {...route} key={index} />
+      ))}
+    </Routes>
   );
 };
 
