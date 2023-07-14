@@ -5,6 +5,7 @@ import { lazy } from 'react';
 const HomePage = lazy(() => import('../pages/HomePage'));
 const AuthPage = lazy(() => import('../pages/AuthPage'));
 const ErrorPage = lazy(() => import('../pages/ErrorPage'));
+const AssessmentsPage = lazy(() => import('../pages/Assessments'));
 
 const routes = [
   {
@@ -27,6 +28,12 @@ const routes = [
   },
   {
     key: '4',
+    path: '/communication',
+    element: <AssessmentsPage />,
+    errorElement: <ErrorPage />
+  },
+  {
+    key: '5',
     path: '*',
     element: <ErrorPage />,
     errorElement: <ErrorPage />,

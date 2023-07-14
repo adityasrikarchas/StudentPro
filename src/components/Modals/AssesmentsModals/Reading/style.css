@@ -1,0 +1,64 @@
+/* Instruction-Modal Starts here */
+
+.instruction-Modal-Container {
+	position: relative;
+	background: white;
+	border-radius: 5px;
+	width: 65%;
+	height: 500px;
+	flex-direction: column;
+}
+.instruction-Modal-Container > h2 {
+	color: #da3832;
+	font-weight: 500;
+	font-size: 24px;
+	padding-left: 75px;
+	margin: 23px 0px 12px 0px;
+}
+.instruction-Modal-Container > h3 {
+	text-align: end;
+	padding-right: 75px;
+	margin-top: 20px;
+	font-size: 14px;
+}
+.instruction-Modal-Container > .greetingtext {
+	background: #f0f2f5;
+	padding: 15px 0px 15px 75px;
+}
+.instruction-Modal-Container > .greetingtext > p {
+	font-weight: 400;
+	font-size: 16px;
+}
+.instructionList {
+	padding-left: 95px;
+}
+.instructionList > ul > li {
+	list-style: disc;
+	padding-top: 15px;
+	font-weight: 400;
+	font-size: 16px;
+}
+.tasktable {
+	padding: 35px 75px 0px 75px;
+}
+.tasktable > table {
+	text-align: center;
+	width: 100%;
+}
+.tasktable th {
+	background: #d9d9d9;
+	padding: 8px 0px;
+}
+.tasktable td {
+	background: #f0f2f5;
+	padding: 10px 0px;
+}
+.instruction-modal_btn {
+	padding-right: 75px;
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 100px;
+	margin-bottom: 15px;
+}
+
+/* Instruction-Modal End here */

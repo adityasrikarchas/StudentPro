@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 // import { useNavigate } from 'react-router-dom';
 
 // Components
-import ModalWrapper from '../components/ModalWrapper';
+import ModalWrapper from '../components/Modals/ModalWrapper/index';
 
 // Assets
 import Image14 from '../assets/images/image14.png';

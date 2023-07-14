@@ -1,0 +1,7 @@
+.pageHeader {
+	background: var(--color-secondary);
+	color: #ffffff;
+	font-weight: 600;
+	font-size: 20px;
+	padding: 12px 0px;
+}

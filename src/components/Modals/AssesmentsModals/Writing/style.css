@@ -1,0 +1,11 @@
+/* Instruction-Modal Starts here */
+
+.instruction-Modal-Container {
+	padding: 30px;
+	position: relative;
+	background: white;
+	border-radius: 5px;
+	width: 750px;
+	flex-direction: column;
+}
+/* Instruction-Modal End here */

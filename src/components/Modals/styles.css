@@ -1,0 +1,230 @@
+.modal-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 100;
+}
+
+/* Audio-Video-Test-Modal Starts here */
+
+.modal-wrapper > .audio-video-test-modal {
+	background: white;
+	padding: 20px 25px;
+	border-radius: 5px;
+	width: 35%;
+}
+.modal-wrapper > .audio-video-test-modal > h2 {
+	font-weight: 600;
+	font-size: 20px;
+	text-align: center;
+}
+.modal-wrapper > .audio-video-test-modal > p {
+	font-weight: 400;
+	font-size: 15px;
+	color: var(--color-gray);
+}
+.modal-wrapper > .audio-video-test-modal > .audio-video-test-modal__video {
+	width: 100%;
+	height: 200px;
+	margin: 20px 0px;
+}
+.modal-wrapper > .audio-video-test-modal > .audio-video-test-modal__video > * {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.audio-video-test-modal__audio,
+.audio-video-test-modal__microphone {
+	display: flex;
+	align-items: flex-start;
+	margin: 15px 0px;
+	font-size: 13px;
+	width: calc(45%);
+	justify-content: space-between;
+}
+.audio-video-test-modal__audio .text-button,
+.audio-video-test-modal__microphone .text-button {
+	color: var(--color-green);
+	margin-top: 10px;
+	cursor: pointer;
+	font-weight: 600;
+}
+.audio-video-test-modal__audio > div,
+.audio-video-test-modal__microphone > div {
+	margin-top: 2px;
+}
+.audio-video-test-modal__bottom {
+	flex-direction: column;
+}
+.audio-video-test-modal__bottom p {
+	margin: 10px 0px;
+	font-size: 13px;
+	color: var(--color-orange);
+}
+
+/* Audio-Video-Test-Modal Ends here */
+
+/* Video-Info-Modal Starts here */
+
+.video-infop-modal-container {
+	padding: 30px;
+	position: relative;
+	background: white;
+	border-radius: 5px;
+	width: 750px;
+	flex-direction: column;
+}
+
+.video-infop-modal-container > h1 {
+	font-weight: 600;
+	font-size: 20px;
+	text-align: center;
+}
+
+.video-info-modal-content {
+	justify-content: space-between;
+	margin: 20px 0px;
+}
+
+.video-info-modal-content > .info-card {
+	flex-direction: column;
+	width: calc(33% - 10px);
+}
+
+.video-info-modal-content > .info-card > .info-card-content {
+	text-align: center;
+	margin: 25px 0px;
+}
+
+.video-info-modal-content > .info-card > .info-card-content > h1 {
+	font-weight: 700;
+	font-size: 15px;
+}
+
+.video-info-modal-content > .info-card > .info-card-content > p {
+	font-weight: 500;
+	font-size: 13px;
+	margin-top: 10px;
+}
+
+.video-info-modal-content > .info-card > .info-card-icon {
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+}
+
+/* Video-Info-Modal Ends here */
+
+/* Live-Record-Modal Starts Here */
+
+.live-record-modal-container {
+	width: 600px;
+	justify-content: space-between;
+}
+
+.live-record-modal-container > .live-record-modal-content {
+	border-radius: 5px;
+	background: white;
+	flex-direction: column;
+	width: 250px;
+	height: 250px;
+	position: relative;
+}
+
+.live-record-modal-container > .live-record-modal-content > .disable {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	cursor: not-allowed;
+}
+
+.live-record-modal-container > .live-record-modal-content > h2 {
+	font-weight: 600;
+	font-size: 16px;
+	text-align: center;
+	margin: 15px 0px;
+}
+
+/* Live-Record-Modal Ends Here */
+
+/* Reminder-Modal Starts Here  */
+
+.remainder-modal-container {
+	position: relative;
+	background: white;
+	border-radius: 5px;
+	width: 800px;
+	height: 450px;
+	padding: 0px 40px;
+	flex-direction: column;
+}
+.remainder-modal-container > h2 {
+	margin: 15px 0px;
+	font-weight: 400;
+	font-size: 24px;
+}
+.remainder-modal-container > hr {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.remainder-modal-content {
+	display: flex;
+}
+.remainder-modal-description > p {
+	color: rgba(0, 0, 0, 0.5);
+	font-weight: 400;
+	font-size: 20px;
+	margin-top: 18px;
+}
+.remainder-modal-description > ul {
+	margin-top: 15px;
+	padding: 0px 20px;
+}
+.remainder-modal-description li {
+	list-style: disc;
+	color: rgba(0, 0, 0, 0.5);
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 22px;
+}
+.remainder-modal-description span {
+	color: #eb5757;
+}
+.remainder-modal-description > h3 {
+	margin-top: 15px;
+	font-size: 15px;
+}
+.remiander-modal-recommendsDiv {
+	width: 250px;
+	margin-top: 18px;
+}
+.remiander-modal-recommendsDiv > hr {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	margin: 7px 0px;
+}
+.remainder-modal__recommends {
+	display: flex;
+	justify-content: space-between;
+}
+
+.remainder-modal__recommends > div > p {
+	font-size: 14px;
+	font-weight: 500;
+}
+.remainder-modal__recommends .text-down {
+	font-size: 12px;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.5);
+	margin-top: 5px;
+}
+.remainder-modal_btn {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 50px;
+}
+/* Reminder-Modal Ends Here */

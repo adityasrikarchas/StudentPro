@@ -1,0 +1,192 @@
+/* Category Card CSS Starts here */
+
+.category-card-container {
+	background: white;
+	border-radius: 20px 20px 0px 0px;
+	min-height: 100px;
+	width: calc(33% - 15px);
+	padding: 20px 15px;
+	text-align: center;
+	position: relative;
+}
+
+.category-card-container > .category-card-img-container {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	margin: auto;
+	margin-bottom: 10px;
+}
+
+.category-card-container > h2 {
+	font-weight: 600;
+	color: black;
+	margin: 10px 0px;
+	font-size: 18px;
+}
+
+.category-card-container > p {
+	font-weight: 600;
+	color: var(--color-gray);
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+
+.category-card-container > .description {
+	font-weight: 500;
+	color: var(--color-gray);
+	font-size: 14px;
+	margin: 15px 0px;
+	color: rgba(26, 27, 31, 1);
+}
+
+.category-card-container > .tags-container {
+	/* width: 75%; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	height: 150px;
+}
+
+.category-card-container > .tags-container > .tag,
+.tag-show-more {
+	padding: 7px 12px;
+	background: rgba(245, 247, 250, 1);
+	border-radius: 20px;
+	color: rgba(34, 37, 41, 0.8);
+	font-weight: 500;
+	font-size: 12px;
+	margin: 5px;
+	cursor: pointer;
+}
+
+.category-card-container > .tags-container > .tag-show-more {
+	background: rgba(255, 144, 64, 1);
+	color: rgba(255, 255, 255, 1);
+}
+
+.category-card-container-button {
+	background: var(--color-dark);
+	color: white;
+	padding: 10px 20px;
+	border-radius: 5px;
+	margin: auto;
+	margin-top: 40px;
+}
+
+/* Category Card CSS Ends here */
+
+/* Interview Card CSS Starts here */
+
+.interview-card-container {
+	background: white;
+	border-radius: 20px;
+	min-height: 100px;
+	width: calc(33% - 10px);
+	padding: 40px 20px;
+	margin-bottom: 20px;
+}
+
+.interview-card-container > .interview-card-header {
+	display: flex;
+	align-items: center;
+}
+
+.interview-card-heading > h1 {
+	font-weight: 600;
+	font-size: 15px;
+}
+
+.interview-card-heading > p {
+	font-weight: 500;
+	font-size: 12px;
+	color: rgba(143, 156, 165, 1);
+	margin-top: 5px;
+}
+
+.interview-card-container > p {
+	font-weight: 400;
+	font-size: 14px;
+	color: rgba(26, 27, 31, 1);
+	margin: 20px 0px;
+	margin-bottom: 40px;
+}
+
+.interview-card-container > .info-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.interview-card-container > .info-container > .info > p {
+	font-size: 13px;
+}
+
+.interview-card-progress-bar-container {
+	margin-top: 25px;
+}
+
+.interview-card-progress-bar-container > .interview-card-progress-bar {
+	height: 5px;
+	border-radius: 5px;
+	background: rgba(240, 242, 245, 1);
+}
+
+.interview-card-progress-bar-container
+	> .interview-card-progress-bar
+	> .interview-card-progress-bar-fill {
+	height: 100%;
+	border-radius: 5px;
+	background: var(--color-green);
+}
+
+.interview-card-progress-bar-container > p {
+	font-size: 13px;
+	font-weight: 500;
+	margin-top: 15px;
+}
+
+/* Interview Card CSS Ends here */
+
+/* Assessment Card CSS Starts here */
+
+.assessment-card-container {
+	background: white;
+	border-radius: 20px;
+	min-height: 100px;
+	padding: 20px;
+	margin-bottom: 20px;
+	flex: 0 0 32%;
+}
+
+.assessment-card-icon-container {
+	height: 70px;
+	width: 70px;
+	border-radius: 50%;
+}
+
+.assessment-card-container > h2 {
+	margin: 20px 0px;
+	font-weight: 400;
+}
+.assessment-card-container > p {
+	margin: 20px 0px;
+	color: var(--color-gray);
+	margin-bottom: 60px;
+}
+
+.assessments-bottom {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 40px;
+	border-top: 1px solid gray;
+	padding-top: 20px;
+}
+
+.assessments-bottom > h2 {
+	font-weight: 400;
+	font-size: 22px;
+}
+/* Assessment Card CSS Ends here */
