@@ -1,0 +1,32 @@
+.user-profile {
+    width: 80%;
+    padding: 5px;
+    border-radius: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+    box-shadow: 1px 2px 3px grey;
+    cursor: pointer;
+}
+
+.user-profile > p {
+    font-weight: 700;
+}
+
+.profile-menu {
+    float: right;
+    margin-right: 3%;
+    margin-top: 5px;
+    width: 300px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-menu > .notifications {
+    background-color: rgba(10, 218, 176, 1);
+    padding: 8px;
+    border-radius: 50px;
+    cursor: pointer;
+}

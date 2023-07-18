@@ -1,6 +1,11 @@
 // // Internal Imports
 import { useState } from "react";
 
+// svgs
+import Cookies from "../../../assets/svgs/Cookies.svg";
+import LaptopWindow from "../../../assets/svgs/LaptopWindow.svg";
+import ChromeIcon from "../../../assets/svgs/google-chrome-icon.svg";
+
 // Components
 import ModalWrapper from "../ModalWrapper";
 import Icon from "../../Icon";
@@ -71,7 +76,7 @@ const ReminderModal = ({ showModal, setShowModal, style }) => {
 									Enabled
 								</p>
 							</div>
-							<Icon name="GreenTick" />
+							<Icon icon={Cookies} />
 						</div>
 						<hr />
 						<div className="remainder-modal__recommends">
@@ -81,7 +86,7 @@ const ReminderModal = ({ showModal, setShowModal, style }) => {
 									1366*768
 								</p>
 							</div>
-							<Icon name="LaptopWindows" />
+							<Icon icon={LaptopWindow} />
 						</div>
 						<hr />
 						<div className="remainder-modal__recommends">
@@ -91,7 +96,7 @@ const ReminderModal = ({ showModal, setShowModal, style }) => {
 									Google Chrome
 								</p>
 							</div>
-							<Icon name="GoogleChrome" />
+							<Icon icon={ChromeIcon} />
 						</div>
 					</div>
 				</div>

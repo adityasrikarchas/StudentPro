@@ -4,6 +4,26 @@ import React from "react";
 import Icon from "../Icon";
 import ButtonGreen from "../Buttons/ButtonGreen";
 
+// svgs
+import Meter from "../../assets/svgs/Meter.svg";
+import Clock from "../../assets/svgs/Clock.svg";
+import Question from "../../assets/svgs/Question.svg";
+
+//stylesheets
+import "./styles.css";
+
+const getColor = (completed) => {
+	if(completed == "0%") {
+		return "rgba(62, 185, 111, 1)";
+	}
+	else if(completed == "100%") {
+		return "rgba(2, 128, 212, 1)";
+	}
+	else {
+		return "rgba(220, 161, 29, 1)";
+	}
+}
+
 const InterviewCard = ({
 	name,
 	subHeading,
@@ -27,10 +47,9 @@ const InterviewCard = ({
 			<div className="interview-card-header">
 				<div style={iconWrapperStyle}>
 					<Icon
-						name={icon}
+						icon={icon}
 						size={iconSize ? iconSize : "40px"}
 						style={{
-							marginRight: "15px",
 							...iconStyle,
 						}}
 					/>
@@ -46,7 +65,7 @@ const InterviewCard = ({
 			<div className="info-container">
 				<div className="info center">
 					<Icon
-						name={"Meter"}
+						icon={Meter}
 						size={"15px"}
 						style={{
 							marginRight: "5px",
@@ -56,7 +75,7 @@ const InterviewCard = ({
 				</div>
 				<div className="info center">
 					<Icon
-						name={"Clock"}
+						icon={Clock}
 						size={"15px"}
 						style={{
 							marginRight: "5px",
@@ -66,7 +85,7 @@ const InterviewCard = ({
 				</div>
 				<div className="info center">
 					<Icon
-						name={"Question"}
+						icon={Question}
 						size={"15px"}
 						style={{
 							marginRight: "5px",
@@ -103,6 +122,7 @@ const InterviewCard = ({
 					onClick={onButtonClick}
 					style={{
 						marginTop: "20px",
+						backgroundColor: getColor(completed)
 					}}
 				/>
 				{children}

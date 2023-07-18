@@ -1,19 +1,18 @@
 .button-green {
-	background: var(--color-green);
 	color: white;
 	padding: 15px 25px;
 	border-radius: 5px;
+	cursor: pointer;
 }
 
 .button-timer {
-	background: var(--color-dark);
 	padding: 6px 15px;
 	border-radius: 25px;
 	width: fit-content;
 }
 .button-timer > p {
-	color: white;
-	font-size: 14px;
+	color: rgba(65, 86, 103, 1);
+	font-size: 20px;
 }
 
 .icon-button {

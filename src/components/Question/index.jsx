@@ -21,6 +21,7 @@ const Question = ({ index, question, options }) => {
 					</label>
 				</div>
 			))}
+			<hr />
 		</div>
 	);
 };

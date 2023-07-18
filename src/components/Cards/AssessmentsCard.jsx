@@ -25,25 +25,20 @@ const AssessmentCard = ({
 					background: iconBgColor,
 				}}
 			>
-				<Icon name={icon} alt={heading} size={"30px"} />
+				<Icon icon={icon} alt={heading} size={"20px"} />
 			</div>
-			<h2>{subHeading}</h2>
+			<h4>{subHeading}</h4>
 			<p style={{ ...descriptionStyle }}>{description}</p>
 			<div className="assessments-bottom">
-				<h2>{heading}</h2>
+				<h4>{heading}</h4>
 				<ButtonGreen
 					text={"Get Started"}
-					icon={"ArrowRight"}
 					onClick={onButtonPress}
 					style={{
 						padding: "12px 25px",
-						borderRadius: "15px",
+						borderRadius: "26px",
 						fontSize: "15px",
 						fontWeight: "400",
-					}}
-					iconStyle={{
-						color: "#fff",
-						marginLeft: "10px",
 					}}
 				/>
 			</div>

@@ -1,23 +1,14 @@
 // Styles
-import Icon from "../Icon";
 import "./styles.css";
 
-const ButtonGreen = ({ text, onClick, icon, style, iconStyle, iconSize }) => {
+const ButtonGreen = ({text, onClick, style}) => {
 	return (
 		<button
 			className="button-green center"
 			onClick={onClick ? onClick : () => {}}
-			style={style}
+			style={{backgroundColor: "var(--color-green)", ...style}}
 		>
-			{text}
-			{icon && (
-				<Icon
-					style={iconStyle}
-					name={icon}
-					alt={text}
-					size={iconSize || "20px"}
-				/>
-			)}
+			{text} &#10140;
 		</button>
 	);
 };

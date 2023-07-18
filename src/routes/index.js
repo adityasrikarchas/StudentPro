@@ -1,11 +1,13 @@
 // Internal Imports
 import { lazy } from 'react';
+import JamesAnderson from "../assets/svgs/JamesAnderson.svg";
 
 // Importing Pages
 const HomePage = lazy(() => import('../pages/HomePage'));
 const AuthPage = lazy(() => import('../pages/AuthPage'));
 const ErrorPage = lazy(() => import('../pages/ErrorPage'));
 const AssessmentsPage = lazy(() => import('../pages/Assessments'));
+const PremiumPage = lazy(() => import('../pages/Premium'));
 
 const routes = [
   {
@@ -29,11 +31,17 @@ const routes = [
   {
     key: '4',
     path: '/communication',
-    element: <AssessmentsPage />,
+    element: <AssessmentsPage userName={"James Anderson"} userAvatar={JamesAnderson}/>,
     errorElement: <ErrorPage />
   },
   {
     key: '5',
+    path: '/premium-memborship',
+    element: <PremiumPage />,
+    errorElement: <ErrorPage />
+  },
+  {
+    key: '6',
     path: '*',
     element: <ErrorPage />,
     errorElement: <ErrorPage />,

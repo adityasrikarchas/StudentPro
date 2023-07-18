@@ -138,7 +138,7 @@
 	> .interview-card-progress-bar-fill {
 	height: 100%;
 	border-radius: 5px;
-	background: var(--color-green);
+	background: linear-gradient(90deg, #0280D4 0%, #0ADAB0 113.36%);
 }
 
 .interview-card-progress-bar-container > p {
@@ -154,26 +154,24 @@
 .assessment-card-container {
 	background: white;
 	border-radius: 20px;
+	width: 180px;
 	min-height: 100px;
 	padding: 20px;
+	margin: 6px;
 	margin-bottom: 20px;
 	flex: 0 0 32%;
+	box-shadow: 0px 1px 2px gray;
 }
 
 .assessment-card-icon-container {
-	height: 70px;
-	width: 70px;
+	height: 40px;
+	width: 40px;
 	border-radius: 50%;
 }
 
-.assessment-card-container > h2 {
-	margin: 20px 0px;
-	font-weight: 400;
-}
 .assessment-card-container > p {
-	margin: 20px 0px;
-	color: var(--color-gray);
-	margin-bottom: 60px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 12px;
 }
 
 .assessments-bottom {
@@ -182,7 +180,7 @@
 	justify-content: space-between;
 	margin-top: 40px;
 	border-top: 1px solid gray;
-	padding-top: 20px;
+	padding-top: 15px;
 }
 
 .assessments-bottom > h2 {
@@ -190,3 +188,76 @@
 	font-size: 22px;
 }
 /* Assessment Card CSS Ends here */
+
+/* Subscription Card CSS Starts here */
+
+.subscription-card-container {
+	background: white;
+	border-radius: 15px;
+	min-height: 415px;
+	cursor: text;
+	padding: 20px;
+	margin-bottom: 20px;
+	flex: 0 0 32%;
+	box-shadow: 2px 3px 4px grey;
+}
+
+.subscription-card-container > .banner {
+	margin: 0px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.subscription-card-container > .banner > h2 {
+	font-size: 18px;
+	font-family: Roboto;
+	margin-bottom: 10px;
+}
+
+.subscription-card-container > .banner > h6 {
+	color: #1EC3CB;
+	font-size: 14px;
+}
+
+.subscription-card-container > p {
+	color: #252525;
+	font-size: 13px;
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 250%;
+}
+
+.subscription-card-description {
+	font-size: 12px;
+	line-height: 200%;
+}
+
+/* subscription Card CSS Ends here */
+
+/* promocode CSS starts here */
+
+.promo-code {
+	margin: 25px;
+	margin-top: 0px;
+	border-radius: 5px 0px;
+	width: 27%;
+	padding: 15px;
+	background-color: white;
+	box-shadow: 2px 3px 5px 1px gray;
+}
+
+.promo-code > h5 {
+	color: navy;
+	margin-bottom: 5px;
+}
+
+.promo-code > input {
+	outline: none;
+	border: 1px solid gray;
+	padding: 3px;
+	width: 85%;
+}
+
+/* promocode CSS ends here */

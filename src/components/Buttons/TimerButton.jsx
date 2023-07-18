@@ -10,6 +10,10 @@ import { formatTime } from "../../utils";
 // Components
 import Icon from "../Icon/index.jsx";
 
+// SVGs
+import Time from "../../assets/svgs/Time.svg";
+import Timer from "../../assets/svgs/Timer.svg";
+
 const TimerButton = ({ time, defaultStart, forward, style, format }) => {
 	const [timer, setTimer] = useState(time);
 
@@ -29,10 +33,7 @@ const TimerButton = ({ time, defaultStart, forward, style, format }) => {
 	return (
 		<div className="button-timer center" style={style}>
 			<Icon
-				name="Time"
-				style={{
-					marginRight: "10px",
-				}}
+				icon={Timer}
 			/>
 			<p>{formatTime(timer, format)}</p>
 		</div>

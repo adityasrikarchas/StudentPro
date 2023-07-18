@@ -1,6 +1,11 @@
 // Internal Imports
 import { useEffect, useState } from "react";
 
+// svgs
+import ReadingTest from "../assets/svgs/ReadingTest.svg";
+import Visibility from "../assets/svgs/Visibility.svg";
+import ArrowLeft from "../assets/svgs/ArrowLeft.svg";
+
 // Components
 import {
 	Switch,
@@ -9,6 +14,7 @@ import {
 	InterviewCard,
 	Icon,
 	ReminderModal,
+	UserProfile
 } from "../components";
 
 // pages
@@ -19,9 +25,9 @@ import { TestProvider } from "../context";
 import { useTest } from "../context/TestContext";
 
 // Data
-import { CommunicationAssessments, ReadingAssessments } from "../assets/data";
+import { CommunicationAssessments, BehaviourAssessments, ReadingAssessments } from "../assets/data";
 
-const Assessments = () => {
+const Assessments = ({userName, userAvatar}) => {
 	// States
 	const [active, setActive] = useState(0);
 	const [assessmentOpened, setAssessmentOpened] = useState(false);
@@ -37,6 +43,8 @@ const Assessments = () => {
 		);
 	}
 
+	const assessmentsAvailable = active==1 ? BehaviourAssessments : CommunicationAssessments;
+
 	return (
 		<TestProvider>
 			<div className="assessments-container bg-gradient">
@@ -49,10 +57,12 @@ const Assessments = () => {
 					/>
 				</div>
 
+				<UserProfile userName={userName} userAvatar={userAvatar}/>
+				<h4>{active==0 ? "Communication" : "Behaviour"} Modules</h4>
+
 				<div className="assessments-cards-wrapper">
 					{
-						// Communication Assessments
-						CommunicationAssessments.map(
+						assessmentsAvailable.map(
 							(assessment) => (
 								<AssessmentCard
 									key={assessment.id}
@@ -88,10 +98,11 @@ const Assessments = () => {
 	);
 };
 
-const DownloadButton = () => {
+const ViewReport = () => {
 	return (
-		<button className="download-button">
-			<span>Download report</span> <Icon name="Download" />
+		<button className="view-report">
+			<span>View report</span>
+			<Icon icon={Visibility} style={{width: "20px", height: "20px", paddingBottom: "3px"}}/>
 		</button>
 	);
 };
@@ -141,7 +152,7 @@ const OpennedAssessment = ({ visibilty, setVisibility }) => {
 				<div className="top-bar">
 					<div className="top-bar-left">
 						<IconButton
-							icon={"ArrowLeft"}
+							icon={ArrowLeft}
 							style={{
 								backgroundColor:
 									"var(--color-green)",
@@ -212,12 +223,12 @@ const OpennedAssessment = ({ visibilty, setVisibility }) => {
 						// Reading Assessments
 						data.map((assessment, index) => (
 							<InterviewCard
-								icon="Reading"
+								icon={ReadingTest}
 								{...assessment}
 								children={
 									assessment.completed ===
 									"100%" ? (
-										<DownloadButton />
+										<ViewReport />
 									) : null
 								}
 								button={
@@ -233,7 +244,7 @@ const OpennedAssessment = ({ visibilty, setVisibility }) => {
 									setShowModal(true);
 								}}
 								iconWrapperStyle={{
-									height: "60px",
+									height: "40px",
 									width: "60px",
 									borderRadius: "50%",
 									display: "flex",

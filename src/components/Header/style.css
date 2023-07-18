@@ -1,7 +1,26 @@
 .pageHeader {
-	background: var(--color-secondary);
-	color: #ffffff;
+	background: rgba(255, 255, 255, 1);
+	box-shadow: 1px 2px 3px grey;
+	/* display: flex;
+	flex-wrap: wrap;
+	padding: 12px;
+	justify-content: space-between; */
+}
+
+.pageHeader > h1 {
+	margin-left: 3em;
+	width: 255px;
+	height: 36px;
+	padding: 10px;
+	padding-bottom: 40px;
+	top: 26px;
+	color: rgba(2, 128, 212, 1);
 	font-weight: 600;
 	font-size: 20px;
-	padding: 12px 0px;
+}
+
+.pageHeader > .logo {
+	position: absolute;
+	right: 5%;
+	top: 1.5%;
 }

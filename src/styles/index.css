@@ -3,6 +3,7 @@
 
 /* Importing Components CSS */
 @import url("./pages/Assessments.css");
+@import url("./pages/Premium.css");
 @import url("./pages/CommunicationTest.css");
 
 /* Overriding Global CSS */

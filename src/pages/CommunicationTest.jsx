@@ -1,24 +1,13 @@
 import { useState } from "react";
 import { Aquestions } from "../assets/data/assesmentQuestions";
-import { IconButton, Question, Header, TimerButton } from "../components";
+import { Question, Header, TimerButton } from "../components";
 
-const CommunicationTest = () => {
+const CommunicationTest = (props) => {
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [startCounter, setStartCounter] = useState(true);
-	const TIME_LIMIT = 10800;
+	const TIME_LIMIT = 86400;
 	const totalQuestions = Aquestions.length;
-	const handlePrevBtn = () => {
-		if (currentQuestion === 0) {
-			return;
-		}
-		setCurrentQuestion(currentQuestion - 1);
-	};
-	const handleNextBtn = () => {
-		if (currentQuestion === totalQuestions - 1) {
-			return;
-		}
-		setCurrentQuestion(currentQuestion + 1);
-	};
+
 	return (
 		<div className="cTestWrapper">
 			<Header text={"Communication Test"} />
@@ -28,9 +17,6 @@ const CommunicationTest = () => {
 					questions
 				</span>
 				<span className="timer">
-					<span className="remainingTime">
-						Remaining Time
-					</span>
 					&nbsp;
 					<TimerButton
 						time={TIME_LIMIT}
@@ -87,39 +73,32 @@ const CommunicationTest = () => {
 				</div>
 				<div className="Card">
 					<span className="totalQuestions">
-						Questions {currentQuestion + 1}-
-						{totalQuestions}
+						Questions {1}-{totalQuestions}
 					</span>
-					<Question
-						question={
-							Aquestions[currentQuestion].question
-						}
-						options={
-							Aquestions[currentQuestion].options
-						}
-						index={currentQuestion}
-					/>
 					<hr />
-					<div className="prevNextBtn">
-						<IconButton
-							icon="ArrowBack"
-							style={{
-								backgroundColor:
-									"var(--color-green)",
-							}}
-							onClick={handlePrevBtn}
-						/>
-						&nbsp;&nbsp;&nbsp;
-						<IconButton
-							icon="ArrowForward"
-							style={{
-								backgroundColor:
-									"var(--color-green)",
-							}}
-							onClick={handleNextBtn}
-						/>
+					<div className="questions">
+					{
+						Aquestions.map((data, index) => (
+							<Question
+								index={index}
+								question={data.question}
+								options={data.options}
+							/>
+						))
+					}
 					</div>
 				</div>
+			</div>
+
+			<div className="page-buttons">
+				{
+					Aquestions.map((data, index) => (
+						<div className="circle">
+							<p>{index+1}</p>
+						</div>
+					))
+				}
+				<button className="exit">EXIT</button>
 			</div>
 		</div>
 	);

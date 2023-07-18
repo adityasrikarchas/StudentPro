@@ -22,7 +22,7 @@ const IconButton = ({
 				onClick={onClick ? onClick : () => {}}
 				style={style}
 			>
-				<Icon size={iconSize} name={icon} style={iconStyle} />
+				<Icon size={iconSize} icon={icon} style={iconStyle} />
 			</button>
 			{text && <p style={textStyle}>{text}</p>}
 		</div>

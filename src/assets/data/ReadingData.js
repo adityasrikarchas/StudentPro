@@ -1,9 +1,11 @@
+import ReadingTest from "../svgs/ReadingTest.svg";
+
 const ReadingAssessments = {
 	all: [
 		{
 			id: 0,
-			icon: "Reading",
-			name: "CommunicationComprehensive Reading Test - 1",
+			icon: ReadingTest,
+			name: "Comprehensive Reading Test - 1",
 			description:
 				"Analyse your writing ability and enhance your skills",
 			level: "Easy",
@@ -15,11 +17,11 @@ const ReadingAssessments = {
 		},
 		{
 			id: 1,
-			icon: "Reading",
-			name: "CommunicationComprehensive Reading Test - 2",
+			icon: ReadingTest,
+			name: "Comprehensive Reading Test - 2",
 			description:
 				"Analyse your writing ability and enhance your skills",
-			level: "Easy",
+			level: "Hard",
 			time: "16 Mins",
 			questions: 10,
 			status: "100% Completed",
@@ -28,11 +30,11 @@ const ReadingAssessments = {
 		},
 		{
 			id: 2,
-			icon: "Reading",
-			name: "CommunicationComprehensive Reading Test - 3",
+			icon: ReadingTest,
+			name: "Comprehensive Reading Test - 3",
 			description:
 				"Analyse your writing ability and enhance your skills",
-			level: "Easy",
+			level: "Medium",
 			time: "16 Mins",
 			questions: 10,
 			status: "34% Completed",
@@ -41,8 +43,8 @@ const ReadingAssessments = {
 		},
 		{
 			id: 3,
-			icon: "Reading",
-			name: "CommunicationComprehensive Reading Test - 4",
+			icon: ReadingTest,
+			name: "Comprehensive Reading Test - 4",
 			description:
 				"Analyse your writing ability and enhance your skills",
 			level: "Easy",
@@ -54,8 +56,8 @@ const ReadingAssessments = {
 		},
 		{
 			id: 4,
-			icon: "Reading",
-			name: "CommunicationComprehensive Reading Test - 5",
+			icon: ReadingTest,
+			name: "Comprehensive Reading Test - 5",
 			description:
 				"Analyse your writing ability and enhance your skills",
 			level: "Easy",
@@ -67,11 +69,11 @@ const ReadingAssessments = {
 		},
 		{
 			id: 5,
-			icon: "Reading",
-			name: "CommunicationComprehensive Reading Test - 6",
+			icon: ReadingTest,
+			name: "Comprehensive Reading Test - 6",
 			description:
 				"Analyse your writing ability and enhance your skills",
-			level: "Easy",
+			level: "Hard",
 			time: "16 Mins",
 			questions: 10,
 			status: "0% Completed",
@@ -80,11 +82,11 @@ const ReadingAssessments = {
 		},
 		{
 			id: 6,
-			icon: "Reading",
-			name: "CommunicationComprehensive Reading Test - 7",
+			icon: ReadingTest,
+			name: "Comprehensive Reading Test - 7",
 			description:
 				"Analyse your writing ability and enhance your skills",
-			level: "Easy",
+			level: "Medium",
 			time: "16 Mins",
 			questions: 10,
 			status: "0% Completed",
@@ -93,11 +95,11 @@ const ReadingAssessments = {
 		},
 		{
 			id: 7,
-			icon: "Reading",
-			name: "CommunicationComprehensive Reading Test - 8",
+			icon: ReadingTest,
+			name: "Comprehensive Reading Test - 8",
 			description:
 				"Analyse your writing ability and enhance your skills",
-			level: "Easy",
+			level: "Medium",
 			time: "16 Mins",
 			questions: 10,
 			status: "0% Completed",
@@ -106,8 +108,8 @@ const ReadingAssessments = {
 		},
 		{
 			id: 8,
-			icon: "Reading",
-			name: "CommunicationComprehensive Reading Test - 9",
+			icon: ReadingTest,
+			name: "Comprehensive Reading Test - 9",
 			description:
 				"Analyse your writing ability and enhance your skills",
 			level: "Easy",
@@ -119,11 +121,11 @@ const ReadingAssessments = {
 		},
 		{
 			id: 9,
-			icon: "Reading",
-			name: "CommunicationComprehensive Reading Test - 10",
+			icon: ReadingTest,
+			name: "Comprehensive Reading Test - 10",
 			description:
 				"Analyse your writing ability and enhance your skills",
-			level: "Easy",
+			level: "Hard",
 			time: "16 Mins",
 			questions: 10,
 			status: "0% Completed",
@@ -132,11 +134,11 @@ const ReadingAssessments = {
 		},
 		{
 			id: 10,
-			icon: "Reading",
-			name: "CommunicationComprehensive Reading Test - 11",
+			icon: ReadingTest,
+			name: "Comprehensive Reading Test - 11",
 			description:
 				"Analyse your writing ability and enhance your skills",
-			level: "Easy",
+			level: "Hard",
 			time: "16 Mins",
 			questions: 10,
 			status: "0% Completed",
@@ -145,11 +147,11 @@ const ReadingAssessments = {
 		},
 		{
 			id: 11,
-			icon: "Reading",
-			name: "CommunicationComprehensive Reading Test - 12",
+			icon: ReadingTest,
+			name: "Comprehensive Reading Test - 12",
 			description:
 				"Analyse your writing ability and enhance your skills",
-			level: "Easy",
+			level: "Hard",
 			time: "16 Mins",
 			questions: 10,
 			status: "0% Completed",
@@ -160,8 +162,8 @@ const ReadingAssessments = {
 	notCompleted: [
 		{
 			id: 0,
-			icon: "Reading",
-			name: "CommunicationComprehensive Reading Test - 1",
+			icon: ReadingTest,
+			name: "Comprehensive Reading Test - 1",
 			description:
 				"Analyse your writing ability and enhance your skills",
 			level: "Easy",
@@ -173,8 +175,8 @@ const ReadingAssessments = {
 		},
 		{
 			id: 2,
-			icon: "Reading",
-			name: "CommunicationComprehensive Reading Test - 3",
+			icon: ReadingTest,
+			name: "Comprehensive Reading Test - 3",
 			description:
 				"Analyse your writing ability and enhance your skills",
 			level: "Easy",
@@ -186,8 +188,8 @@ const ReadingAssessments = {
 		},
 		{
 			id: 5,
-			icon: "Reading",
-			name: "CommunicationComprehensive Reading Test - 6",
+			icon: ReadingTest,
+			name: "Comprehensive Reading Test - 6",
 			description:
 				"Analyse your writing ability and enhance your skills",
 			level: "Easy",
@@ -199,11 +201,11 @@ const ReadingAssessments = {
 		},
 		{
 			id: 6,
-			icon: "Reading",
-			name: "CommunicationComprehensive Reading Test - 7",
+			icon: ReadingTest,
+			name: "Comprehensive Reading Test - 7",
 			description:
 				"Analyse your writing ability and enhance your skills",
-			level: "Easy",
+			level: "Hard",
 			time: "16 Mins",
 			questions: 10,
 			status: "0% Completed",
@@ -212,11 +214,11 @@ const ReadingAssessments = {
 		},
 		{
 			id: 7,
-			icon: "Reading",
-			name: "CommunicationComprehensive Reading Test - 8",
+			icon: ReadingTest,
+			name: "Comprehensive Reading Test - 8",
 			description:
 				"Analyse your writing ability and enhance your skills",
-			level: "Easy",
+			level: "Medium",
 			time: "16 Mins",
 			questions: 10,
 			status: "0% Completed",
@@ -225,8 +227,8 @@ const ReadingAssessments = {
 		},
 		{
 			id: 9,
-			icon: "Reading",
-			name: "CommunicationComprehensive Reading Test - 10",
+			icon: ReadingTest,
+			name: "Comprehensive Reading Test - 10",
 			description:
 				"Analyse your writing ability and enhance your skills",
 			level: "Easy",
@@ -238,11 +240,11 @@ const ReadingAssessments = {
 		},
 		{
 			id: 10,
-			icon: "Reading",
-			name: "CommunicationComprehensive Reading Test - 11",
+			icon: ReadingTest,
+			name: "Comprehensive Reading Test - 11",
 			description:
 				"Analyse your writing ability and enhance your skills",
-			level: "Easy",
+			level: "Medium",
 			time: "16 Mins",
 			questions: 10,
 			status: "0% Completed",
@@ -251,11 +253,11 @@ const ReadingAssessments = {
 		},
 		{
 			id: 11,
-			icon: "Reading",
-			name: "CommunicationComprehensive Reading Test - 12",
+			icon: ReadingTest,
+			name: "Comprehensive Reading Test - 12",
 			description:
 				"Analyse your writing ability and enhance your skills",
-			level: "Easy",
+			level: "Medium",
 			time: "16 Mins",
 			questions: 10,
 			status: "0% Completed",
@@ -266,11 +268,11 @@ const ReadingAssessments = {
 	completed: [
 		{
 			id: 1,
-			icon: "Reading",
-			name: "CommunicationComprehensive Reading Test - 2",
+			icon: ReadingTest,
+			name: "Comprehensive Reading Test - 2",
 			description:
 				"Analyse your writing ability and enhance your skills",
-			level: "Easy",
+			level: "Hard",
 			time: "16 Mins",
 			questions: 10,
 			status: "100% Completed",
@@ -279,11 +281,11 @@ const ReadingAssessments = {
 		},
 		{
 			id: 3,
-			icon: "Reading",
-			name: "CommunicationComprehensive Reading Test - 4",
+			icon: ReadingTest,
+			name: "Comprehensive Reading Test - 4",
 			description:
 				"Analyse your writing ability and enhance your skills",
-			level: "Easy",
+			level: "Hard",
 			time: "16 Mins",
 			questions: 10,
 			status: "100% Completed",
@@ -292,11 +294,11 @@ const ReadingAssessments = {
 		},
 		{
 			id: 4,
-			icon: "Reading",
-			name: "CommunicationComprehensive Reading Test - 5",
+			icon: ReadingTest,
+			name: "Comprehensive Reading Test - 5",
 			description:
 				"Analyse your writing ability and enhance your skills",
-			level: "Easy",
+			level: "Medium",
 			time: "16 Mins",
 			questions: 10,
 			status: "100% Completed",
@@ -305,8 +307,8 @@ const ReadingAssessments = {
 		},
 		{
 			id: 8,
-			icon: "Reading",
-			name: "CommunicationComprehensive Reading Test - 9",
+			icon: ReadingTest,
+			name: "Comprehensive Reading Test - 9",
 			description:
 				"Analyse your writing ability and enhance your skills",
 			level: "Easy",

@@ -1,9 +1,14 @@
+import ReadingTest from "../svgs/ReadingTest.svg";
+import SpeakingTest from "../svgs/SpeakingTest.svg";
+import ListeningTest from "../svgs/ListeningTest.svg";
+import WritingTest from "../svgs/WritingTest.svg";
+
 const ComunicationAssessments = [
 	{
 		id: 1,
-		icon: "Reading",
+		icon: ReadingTest,
 		iconBgColor: "rgba(235, 254, 255, 1)",
-		heading: "ReadingTest",
+		heading: "Reading",
 		subHeading: "Comprehensive Reading Test",
 		description:
 			"Analyse your reading ability and enhance your skills by taking up multiple test with your convenient.",
@@ -93,7 +98,7 @@ const ComunicationAssessments = [
 	},
 	{
 		id: 2,
-		icon: "SpeakingTest",
+		icon: SpeakingTest,
 		iconBgColor: "rgba(239, 239, 251, 1)",
 		heading: "Speaking",
 		subHeading: "Comprehensive Speaking Test",
@@ -102,7 +107,7 @@ const ComunicationAssessments = [
 	},
 	{
 		id: 3,
-		icon: "ListeningTest",
+		icon: ListeningTest,
 		iconBgColor: "rgba(229, 244, 255, 1)",
 		heading: "Listening",
 		subHeading: "Comprehensive Listening Test",
@@ -111,7 +116,7 @@ const ComunicationAssessments = [
 	},
 	{
 		id: 4,
-		icon: "WritingTest",
+		icon: WritingTest,
 		iconBgColor: "rgba(230, 254, 250, 1)",
 		heading: "Writing",
 		subHeading: "Comprehensive Writing Test",

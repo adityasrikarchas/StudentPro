@@ -4,7 +4,7 @@ import React from "react";
 // Styles
 import "./styles.css";
 
-const Switch = ({ options, active, setActive }) => {
+const Switch = ({ options, active, setActive, style }) => {
 	const handleClick = (idx) => {
 		setActive(idx);
 	};
@@ -18,12 +18,13 @@ const Switch = ({ options, active, setActive }) => {
 						style={{
 							backgroundColor:
 								active === index
-									? "var(--bg-highlight)"
-									: "transparent",
+									? "ghostwhite"
+									: "var(--bg-highlight)",
 							color:
 								active === index
-									? "var(--color-dark)"
-									: "var(--bg-highlight)",
+									? "var(--bg-highlight)"
+									: "white",
+							style: {...style},
 						}}
 						id={index}
 						onClick={() => handleClick(index)}
