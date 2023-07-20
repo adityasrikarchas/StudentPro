@@ -6,8 +6,9 @@ import JamesAnderson from "../assets/svgs/JamesAnderson.svg";
 const HomePage = lazy(() => import('../pages/HomePage'));
 const AuthPage = lazy(() => import('../pages/AuthPage'));
 const ErrorPage = lazy(() => import('../pages/ErrorPage'));
-const AssessmentsPage = lazy(() => import('../pages/Assessments'));
+const CommunicationPage = lazy(() => import('../pages/CommunicationPage'));
 const PremiumPage = lazy(() => import('../pages/Premium'));
+
 
 const routes = [
   {
@@ -31,7 +32,7 @@ const routes = [
   {
     key: '4',
     path: '/communication',
-    element: <AssessmentsPage userName={"James Anderson"} userAvatar={JamesAnderson}/>,
+    element: <CommunicationPage userName={"Avinash Gupta"} userAvatar={JamesAnderson}/>,
     errorElement: <ErrorPage />
   },
   {

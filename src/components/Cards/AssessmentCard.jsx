@@ -10,6 +10,7 @@ import ButtonGreen from "../Buttons/ButtonGreen";
 const AssessmentCard = ({
 	icon,
 	iconBgColor,
+	assessmentType,
 	heading,
 	subHeading,
 	description,
@@ -29,8 +30,8 @@ const AssessmentCard = ({
 			</div>
 			<h4>{subHeading}</h4>
 			<p style={{ ...descriptionStyle }}>{description}</p>
-			<div className="assessments-bottom">
-				<h4>{heading}</h4>
+			<div className="assessments-bottom" style={{borderTop: assessmentType=="communication" ? "1px solid gray" : null}}>
+				{assessmentType=="communication" ? <h4>{heading}</h4> : null}
 				<ButtonGreen
 					text={"Get Started"}
 					onClick={onButtonPress}
@@ -39,6 +40,7 @@ const AssessmentCard = ({
 						borderRadius: "26px",
 						fontSize: "15px",
 						fontWeight: "400",
+						marginLeft: assessmentType=="behaviour" ? "20%" : null
 					}}
 				/>
 			</div>

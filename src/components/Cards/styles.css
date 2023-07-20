@@ -85,6 +85,7 @@
 	min-height: 100px;
 	width: calc(33% - 10px);
 	padding: 40px 20px;
+	margin: 5px;
 	margin-bottom: 20px;
 }
 
@@ -170,7 +171,6 @@
 }
 
 .assessment-card-container > p {
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	font-size: 12px;
 }
 
@@ -179,7 +179,6 @@
 	align-items: center;
 	justify-content: space-between;
 	margin-top: 40px;
-	border-top: 1px solid gray;
 	padding-top: 15px;
 }
 
@@ -261,3 +260,23 @@
 }
 
 /* promocode CSS ends here */
+
+/* exit card css */
+
+.exit-card {
+	position: absolute;
+	top: 33vh;
+	left: 36%;
+	width: 25%;
+	padding: 30px;
+	background: white;
+	box-shadow: 1px 2px 3px gray;
+	font-family: Poppins;
+}
+
+.exit-card > .buttons {
+	margin-top: 15px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}

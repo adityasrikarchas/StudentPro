@@ -1,8 +1,9 @@
 // Internal Imports
 import { useEffect, useState } from "react";
+import { useSelector } from 'react-redux';
 
 // svgs
-import ReadingTest from "../assets/svgs/ReadingTest.svg";
+import ReadingTestIcon from "../assets/svgs/ReadingTest.svg";
 import Visibility from "../assets/svgs/Visibility.svg";
 import ArrowLeft from "../assets/svgs/ArrowLeft.svg";
 
@@ -13,16 +14,13 @@ import {
 	IconButton,
 	InterviewCard,
 	Icon,
-	ReminderModal,
+	RemainderModal,
 	UserProfile
 } from "../components";
 
 // pages
-import CommunicationTest from "./CommunicationTest";
-
-//context
-import { TestProvider } from "../context";
-import { useTest } from "../context/TestContext";
+import ReadingCommunicationTest from "./ReadingTest";
+import ListeningCommunicationTest from "./ListeningTest";
 
 // Data
 import { CommunicationAssessments, BehaviourAssessments, ReadingAssessments } from "../assets/data";
@@ -34,19 +32,19 @@ const Assessments = ({userName, userAvatar}) => {
 
 	if (assessmentOpened) {
 		return (
-			<TestProvider>
+			// <TestProvider>
 				<OpennedAssessment
 					visibilty={assessmentOpened}
 					setVisibility={setAssessmentOpened}
 				/>
-			</TestProvider>
+			// </TestProvider>
 		);
 	}
 
 	const assessmentsAvailable = active==1 ? BehaviourAssessments : CommunicationAssessments;
 
 	return (
-		<TestProvider>
+		// <TestProvider>
 			<div className="assessments-container bg-gradient">
 				{/* Toggler */}
 				<div className="switch-container">
@@ -70,6 +68,7 @@ const Assessments = ({userName, userAvatar}) => {
 									iconBgColor={
 										assessment.iconBgColor
 									}
+									assessmentType={active==0 ? "communication" : "behaviour"}
 									heading={
 										assessment.heading
 									}
@@ -82,11 +81,11 @@ const Assessments = ({userName, userAvatar}) => {
 									descriptionStyle={
 										assessment.descriptionStyle
 									}
-									onButtonPress={() =>
+									onButtonPress={() => {
 										setAssessmentOpened(
 											true
-										)
-									}
+										);
+									}}
 									style={assessment.style}
 								/>
 							)
@@ -94,7 +93,7 @@ const Assessments = ({userName, userAvatar}) => {
 					}
 				</div>
 			</div>
-		</TestProvider>
+		// </TestProvider>
 	);
 };
 
@@ -110,9 +109,7 @@ const ViewReport = () => {
 const OpennedAssessment = ({ visibilty, setVisibility }) => {
 	const [activeTab, setActiveTab] = useState(0);
 	const [showModal, setShowModal] = useState(false);
-
-	// Contexts
-	const { isTestStarted } = useTest();
+	const { isTestStarted } = useSelector((state) => state.UpdateTestStatus);
 
 	const tabs = [
 		{
@@ -141,10 +138,10 @@ const OpennedAssessment = ({ visibilty, setVisibility }) => {
 	}, [activeTab]);
 
 	return isTestStarted ? (
-		<CommunicationTest />
+		<ReadingCommunicationTest />
 	) : (
 		<>
-			<ReminderModal
+			<RemainderModal
 				showModal={showModal}
 				setShowModal={setShowModal}
 			/>
@@ -165,16 +162,13 @@ const OpennedAssessment = ({ visibilty, setVisibility }) => {
 					<div className="top-bar-right">
 						<div
 							style={{ marginRight: "15px" }}
-							className="top-bar-buttons"
+							className="filter top-bar-buttons"
 						>
 							<p>Filters</p>
 							<i
 								style={{ marginLeft: "5px" }}
 								className="fa-solid fa-chevron-down"
 							></i>
-						</div>
-						<div className="top-bar-buttons">
-							<p>Sort</p>
 						</div>
 					</div>
 				</div>
@@ -223,7 +217,7 @@ const OpennedAssessment = ({ visibilty, setVisibility }) => {
 						// Reading Assessments
 						data.map((assessment, index) => (
 							<InterviewCard
-								icon={ReadingTest}
+								icon={ReadingTestIcon}
 								{...assessment}
 								children={
 									assessment.completed ===

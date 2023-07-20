@@ -225,6 +225,6 @@
 .remainder-modal_btn {
 	display: flex;
 	justify-content: flex-end;
-	margin-top: 50px;
+	margin-top: 0px;
 }
 /* Reminder-Modal Ends Here */

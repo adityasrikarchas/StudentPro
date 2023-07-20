@@ -17,7 +17,7 @@ import InstructionsModal from "./Reading/InstructionsModal";
 import "../styles.css";
 
 // Modal
-const ReminderModal = ({ showModal, setShowModal, style }) => {
+const RemainderModal = ({ showModal, setShowModal, style }) => {
 	const [showInstructionModal, setShowInstructionModal] = useState(false);
 	const showInstructionModalHandler = () => {
 		setShowInstructionModal(true);
@@ -104,6 +104,7 @@ const ReminderModal = ({ showModal, setShowModal, style }) => {
 					<ButtonGreen
 						text="Proceed"
 						onClick={showInstructionModalHandler}
+						style={{borderRadius: "50px"}}
 					/>
 				</div>
 			</div>
@@ -111,4 +112,4 @@ const ReminderModal = ({ showModal, setShowModal, style }) => {
 	);
 };
 
-export default ReminderModal;
+export default RemainderModal;

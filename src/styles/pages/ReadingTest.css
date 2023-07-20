@@ -8,7 +8,7 @@
 }
 
 .timerSection {
-	padding: 10px 110px 10px 50px;
+	padding: 10px 60px 0px 50px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -110,22 +110,29 @@ hr {
 
 .page-buttons {
 	display: flex;
-	justify-content: center;
+	align-items: center;
+	margin: auto;
+	width: 50%;
+	padding: 10px;
+	overflow-x: scroll;
+	border-radius: 108px;
+	box-shadow: 1px 2px 3px grey;
 }
 
-.page-buttons > .circle {
-	margin: 20px;
-	margin-top: 0%;
-	padding: 0.7em;
-	height: 45px;
-	width: 45px;
-	text-align: center;
-	color: black;
-	background: rgba(217, 217, 217, 1);
-	border-radius: 25%;
+.page-buttons::-webkit-scrollbar:horizontal {
+	width: 20px;
 }
 
-.page-buttons > .exit {
+.page-buttons::-webkit-scrollbar-track {
+	border-radius: 10px;
+}
+
+.page-buttons::-webkit-scrollbar-thumb {
+	background: rgba(2, 128, 212, 1);
+	border-radius: 10px;
+}
+
+.exit {
 	position: absolute;
 	right: 3%;
 	cursor: pointer;
@@ -148,7 +155,10 @@ hr {
 	text-align: center;
 }
 
-.close-test {
-	position: absolute;
-	background: transparent;
+.change-font-size {
+	width: 12%;
+	margin-left: 33%;
+	align-items: center;
+	display: flex;
+	justify-content: space-around;
 }

@@ -9,9 +9,6 @@ import { Provider } from 'react-redux';
 // Redux
 import Store from './redux';
 
-// Web Vitals
-// import ReportWebVitals from './reportWebVitals';
-
 // Styles
 import './styles/index.css';
 
@@ -28,5 +25,3 @@ root.render(
     </Provider>
   </React.StrictMode>
 );
-
-// ReportWebVitals(console.log);

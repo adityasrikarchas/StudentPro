@@ -31,7 +31,7 @@ const App = () => {
         <Routes>
           {Routings.map((route, index) => (
             <Route {...route} key={index} />
-          ))}
+          ))},
         </Routes>
       </Suspense>
     </Layout>

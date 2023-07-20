@@ -1,3 +1,7 @@
+// redux
+import { useDispatch } from 'react-redux';
+import { START_TEST } from '../../../../redux/actions';
+
 // Components
 import ModalWrapper from "../../ModalWrapper";
 import ButtonGreen from "../../../Buttons/ButtonGreen";
@@ -5,12 +9,9 @@ import ButtonGreen from "../../../Buttons/ButtonGreen";
 // Styles
 import "./style.css";
 
-// contexts
-import { useTest } from "../../../../context/TestContext";
-
 // Modal
 const InstructionsModal = ({ showModal, setShowModal, style }) => {
-	const { setIsTestStarted } = useTest();
+	const dispatch = useDispatch();
 	return (
 		<ModalWrapper showModal={showModal} setShowModal={setShowModal}>
 			<div className="instruction-Modal-Container">
@@ -53,8 +54,9 @@ const InstructionsModal = ({ showModal, setShowModal, style }) => {
 					<ButtonGreen
 						text="Proceed"
 						onClick={() => {
-							setIsTestStarted(true);
+							dispatch(START_TEST());
 						}}
+						style={{borderRadius: "50px"}}
 					/>
 				</div>
 			</div>

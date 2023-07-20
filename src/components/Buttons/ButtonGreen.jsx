@@ -1,14 +1,15 @@
 // Styles
 import "./styles.css";
 
-const ButtonGreen = ({text, onClick, style}) => {
+const ButtonGreen = ({text, onClick, style, showIcon}) => {
 	return (
 		<button
 			className="button-green center"
 			onClick={onClick ? onClick : () => {}}
 			style={{backgroundColor: "var(--color-green)", ...style}}
 		>
-			{text} &#10140;
+			{text} 
+			{showIcon ? null : <span>&#10140;</span>}
 		</button>
 	);
 };

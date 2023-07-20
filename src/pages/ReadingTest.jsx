@@ -1,12 +1,37 @@
 import { useState } from "react";
 import { Aquestions } from "../assets/data/assesmentQuestions";
-import { Question, Header, TimerButton } from "../components";
+import { Question, Header, TimerButton, ExitCard } from "../components";
+import RoundedIconButton from "../components/Buttons/RoundedIconButton";
 
-const CommunicationTest = (props) => {
-	const [currentQuestion, setCurrentQuestion] = useState(0);
+const ReadingCommunicationTest = (props) => {
+	const FIXED_FONT = 16;
+	const [fontSize, setFontSize] = useState(FIXED_FONT);
+	const [answerColor, setAnswerColor] = useState(new Array(Aquestions.length).fill("rgba(217, 217, 217, 1)"));
 	const [startCounter, setStartCounter] = useState(true);
+	const [exitPage, setExitPage] = useState(false);
 	const TIME_LIMIT = 86400;
 	const totalQuestions = Aquestions.length;
+
+	const increaseFontSize = () => {
+		setFontSize(fontSize + 2);
+	}
+
+	const fixedFontSize = () => {
+		setFontSize(FIXED_FONT);
+	}
+
+	const decreaseFontSize = () => {
+		setFontSize(fontSize - 2);
+	}
+
+	const showExitPage = () => {
+		setExitPage(!exitPage);
+	}
+
+	const changeAnswerColor = (idx) => {
+		answerColor[idx] = "rgba(62, 185, 111, 1)";
+		setAnswerColor([...answerColor]);
+	}
 
 	return (
 		<div className="cTestWrapper">
@@ -16,6 +41,19 @@ const CommunicationTest = (props) => {
 					Read the following passage and answer the
 					questions
 				</span>
+
+				<div className="change-font-size">
+					<RoundedIconButton action={decreaseFontSize} style={{ background: "white", boxShadow: "1px 2px 3px grey", width: "36px", height: "36px" }}>
+						A<sup>-</sup>
+					</RoundedIconButton>
+					<RoundedIconButton action={fixedFontSize} style={{ background: "white", boxShadow: "1px 2px 3px grey", width: "36px", height: "36px" }}>
+						A
+					</RoundedIconButton>
+					<RoundedIconButton action={increaseFontSize} style={{ background: "white", boxShadow: "1px 2px 3px grey", width: "36px", height: "36px" }}>
+						A<sup>+</sup>
+					</RoundedIconButton>
+				</div>
+
 				<span className="timer">
 					&nbsp;
 					<TimerButton
@@ -25,12 +63,13 @@ const CommunicationTest = (props) => {
 					/>
 				</span>
 			</div>
+
 			<div className="testCards">
 				<div className="Card pCard">
 					<div className="passageHeading">
 						Passage Heading
 					</div>
-					<div className="passage">
+					<div className="passage" style={{ fontSize: fontSize }}>
 						Having a strong sense of discipline means
 						that you possess the ability to control your
 						impulses and focus your efforts and energy
@@ -77,15 +116,17 @@ const CommunicationTest = (props) => {
 					</span>
 					<hr />
 					<div className="questions">
-					{
-						Aquestions.map((data, index) => (
-							<Question
-								index={index}
-								question={data.question}
-								options={data.options}
-							/>
-						))
-					}
+						{
+							Aquestions.map((data, index) => (
+								<Question
+									index={index}
+									question={data.question}
+									options={data.options}
+									fontSize={fontSize}
+									changeAnswerColor={changeAnswerColor}
+								/>
+							))
+						}
 					</div>
 				</div>
 			</div>
@@ -93,14 +134,15 @@ const CommunicationTest = (props) => {
 			<div className="page-buttons">
 				{
 					Aquestions.map((data, index) => (
-						<div className="circle">
-							<p>{index+1}</p>
-						</div>
+						<RoundedIconButton style={{ background: answerColor[index], marginLeft: "8px", width: "50px", height: "50px", }}>
+							{index + 1}
+						</RoundedIconButton>
 					))
 				}
-				<button className="exit">EXIT</button>
+				{exitPage ? <ExitCard action={showExitPage} /> : <button className="exit" onClick={showExitPage}>EXIT</button>}
+
 			</div>
 		</div>
 	);
 };
-export default CommunicationTest;
+export default ReadingCommunicationTest;

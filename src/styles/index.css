@@ -2,9 +2,9 @@
 @import url('./__partials.css');
 
 /* Importing Components CSS */
-@import url("./pages/Assessments.css");
+@import url("./pages/Communication.css");
 @import url("./pages/Premium.css");
-@import url("./pages/CommunicationTest.css");
+@import url("./pages/ReadingTest.css");
 
 /* Overriding Global CSS */
 

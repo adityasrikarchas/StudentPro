@@ -1,5 +1,6 @@
 // External Imports
 import { Link, useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 // Internal Imports
 import { useState, useEffect } from 'react';
@@ -76,6 +77,17 @@ const Layout = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [currentRoute, setCurrentRoute] = useState('/');
 
+  useEffect(() => {
+    setCurrentRoute(location.pathname);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    console.log(currentRoute);
+  }, [currentRoute]);
+
+  const layout_visibilty = useSelector((state) => state.UpdateLayoutVisibility);
+  if (layout_visibilty.visible === false) return <>{children}</>;
+
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
@@ -148,14 +160,6 @@ const Layout = ({ children }) => {
       },
     ],
   };
-
-  useEffect(() => {
-    setCurrentRoute(location.pathname);
-  }, [location.pathname]);
-
-  useEffect(() => {
-    console.log(currentRoute);
-  }, [currentRoute]);
 
   return (
     <div id="layout-wrapper">
